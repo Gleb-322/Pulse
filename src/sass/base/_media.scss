@@ -3,6 +3,8 @@
         max-width: 850px; 
         }
     .promo {
+        background-size: 1200px 750px;
+        background-position: left 10%;
         padding: 20px 0 90px 0;
         &__wrapper {
             margin-top: 90px;
@@ -42,6 +44,8 @@
         max-width: 668px;
     }
     .promo {
+        background-size: 1200px 650px;
+        background-position: left 10%;
         padding: 20px 0 50px 0;
         &__header {
             font-size: 34px;
@@ -88,6 +92,43 @@
             }
         }
     }
+}
+
+@media (max-width: 767px) {
+    .promo {
+        padding: 20px 5px 50px 5px;
+        background-size: 1200px 650px;
+        background-position: left 10%;
+        
+        &__wrapper {
+            margin-top: 55px;
+            align-items: center;
+        }
+    } 
+    .header {
+        justify-content: space-around;
+        &__logo {
+            width: 230px;
+            margin-left: 40px;
+        }
+        &__official {
+           display: none;
+        }
+        &__contacts {
+            margin-right: 40px;
+        }
+        &__phone {
+            font-size: 16px;
+        }
+    }
+    .button {
+        width: 150px;
+        height: 30px;
+        &_main {
+            width: 280px;
+            height: 50px;
+        }
+    }   
 }
     
 
