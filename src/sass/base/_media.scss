@@ -86,11 +86,8 @@
             width: 320px;
             margin-bottom: 30px;
         }
-        &__content {
-            br {
-                display: none;
-            }
-        }
+        
+        
     }
 }
 
@@ -129,6 +126,33 @@
             height: 50px;
         }
     }   
+}
+@media (max-width: 575px) {
+    .container {
+        max-width: 475px;
+    }
+    .promo {
+        min-height: 800px;
+        padding: 20px 5px 50px 5px;
+        background-size: 870px 810px;
+        &__icons {
+            min-height: 200px;
+            width: 250px;
+            height: 250px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-content: space-between;
+        }
+    }
+    .title {
+        font-size: 25px;
+    }
+    .advantages {
+        &__icon {
+            width: 247px;
+        }
+    }
 }
     
 
