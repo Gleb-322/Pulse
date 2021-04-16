@@ -2,6 +2,11 @@
     .container {
         max-width: 850px; 
         }
+    .title {
+        &_left {
+            font-size: 30px;
+        }
+    }
     .promo {
         background-size: 1210px 720px;
         background-position: 10%;
@@ -36,12 +41,17 @@
         &__wrapper {
             width: 100%;
         }
-    }
+    
 }
 
 @media (max-width: 991px) {
     .container {
         max-width: 668px;
+    }
+    .title {
+        &_left {
+            font-size: 25px;
+        }
     }
     .promo {
         min-height: 643px;
@@ -75,6 +85,11 @@
             width: 280px;
             height: 50px;
         }
+        &_submit {
+            width: 100%;
+            height: 55px;
+            font-size: 16px;
+        }
     }
     .advantages {
         &__wrapper {
@@ -86,9 +101,14 @@
         &__icon {
             width: 320px;
             margin-bottom: 30px;
+        }  
+    }
+    }
+    .consultation {
+        padding: 82px 0;
+        &__descr {
+            font-size: 18px;
         }
-        
-        
     }
 }
 
@@ -103,7 +123,12 @@
             margin-top: 55px;
             align-items: center;
         }
-    } 
+    }
+    .title {
+        &_left {
+            font-size: 23px;
+        }
+    }
     .header {
         justify-content: space-around;
         &__logo {
@@ -127,7 +152,20 @@
             width: 280px;
             height: 50px;
         }
-    }   
+        &_submit {
+            width: 100%;
+            height: 55px;
+            font-size: 16px;
+        }
+    } 
+    .consultation {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+       
+    }
+    
+    
 }
 @media (max-width: 575px) {
     .container {
@@ -158,7 +196,13 @@
             height: 50px;
             font-size: 16px;
         }
+        &_submit {
+            width: 100%;
+            height: 55px;
+            font-size: 16px;
+        }
     }
+    
     }
     .promo {
         min-height: 670px;
@@ -187,13 +231,28 @@
         }
     }
     .title {
-        font-size: 22px;
+        font-size: 18px;
+        &_left {
+            font-size: 13px;
+            text-align: center;
+        }
+
     }
     .advantages {
         &__icon {
             width: 247px;
         }
     }
+    .consultation {
+        min-height: 480px;
+        padding: 40px 0;
+        &__descr {
+            font-size: 13px;
+            text-align: center;
+            margin-top: 30px;
+        }
+    }
+    
 }
     
 
