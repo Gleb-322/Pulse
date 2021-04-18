@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/bootstrap-reboot.min.css">
     <link rel="stylesheet" href="css/fonts.css">
-    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.3/tiny-slider.css"> <!-- tiny slider with pure js -->
+    <!-- <link rel="stylesheet" href="css/slick.css"> --> <!-- click slider с jquery -->
     <link rel="stylesheet" href="css/style.min.css">
     <title>Pulse</title>
 </head>
@@ -128,13 +129,62 @@
                 <div><img src="img/clock_s1.png" alt="slide"></div>
                 <div><img src="img/clock_s2.png" alt="slide"></div>
                 <div><img src="img/clock_s3.png" alt="slide"></div>
-              </div>
+            </div>
+            <button type="button" class="prev"><img src="icons/chevron-left-solid.svg"></button>
+            <button type="button" class="next"><img src="icons/chevron-right-solid.svg"></button>
+
         </div>
     </section>
 
-    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <section class="catalog">
+        <div class="container">
+            <h2 class="title">Каталог пульсометров</h2>
+            <ul class="catalog__tabs">
+                <li class="catalog__tab catalog__tab_active"><div>Для фитнеса</div></li>
+                <li class="catalog__tab"><div>для бега</div></li>
+                <li class="catalog__tab"><div>для триатлона</div></li>
+            </ul>
+
+            <div class="catalog__content">
+                <div class="catalog-item">
+                    <img src="img/clock_sup.png" alt="clock" class="catalog-item__img">
+                    <div class="catalog-item__subtitle">
+                        Пульсометр Polar FT1
+                    </div>
+                    <div class="catalog-item__descr">
+                        Для первых шагов в тренировках, основанных на сердечном ритме
+                    </div>
+                    <a class="catalog-item__link">ПОДРОБНЕЕ</a>
+                    <hr>
+
+
+                    <div class="catalog-item__footer">
+                        <div class="catalog-item__prices">
+                            <div class="catalog-item__old-price">
+                                4 750 руб.
+                            </div>
+                            <div class="catalog-item__new-price">
+                                4 500 руб.
+                            </div>
+                        </div>
+                        <button class="button button_mini">КУПИТЬ</button>
+                    </div>
+                </div>
+            </div>
+            <div class="catalog__content"></div>
+            <div class="catalog__content"></div>
+        </div>
+    </section>
+
+
+    <!-- <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-    <script src="js/slick.min.js"></script>
+    <script src="js/slick.min.js"></script> --> <!-- файлы для slick slider -->
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script> <!-- файлы для tiny slider -->
+
+
     <script src="js/script.js"></script>
 </body>
 </html>

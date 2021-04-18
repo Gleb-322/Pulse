@@ -5,9 +5,9 @@
         width: 750px;
         margin: 0 auto;
     }
-    .slick-prev, .slick-next {
+    .prev, .next {
         position: absolute;
-        top: 50%;
+        top: 38%;
         transform: translateY(-50%);
         left: -66px;
         border: none;
@@ -17,8 +17,23 @@
             height: 50px;
         }
     }
-    .slick-next {
+    .next {
         right: -66px;
         left: auto;
     }
+
+    .tns-item { /* имя блока tiny слайдера */
+        img {
+            display: block;
+            margin: 0 auto;
+        }
+    }
+    // .tns-nav { /* стили для точек в tinyslider */
+    //     button {
+    //         background-color: red;
+    //     }
+    //     .tns-nav-active {
+    //         background-color: blue;
+    //     }
+    // }
 }
