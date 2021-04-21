@@ -1,0 +1,36 @@
+.comment {
+    padding-bottom: 71px;
+    &__item {
+        margin-top: 100px; 
+        display: flex;
+        &:nth-child(2){
+            margin-top: 70px;
+        }
+    }
+    &__text {
+        margin-left: 62px;
+        padding-right: 60px;
+
+    }
+    &__img {
+        width: 169px;
+        height: 169px;
+    }
+    &__author {
+        color: #0d0d0d;
+        font-size: 18px;
+        font-weight: 700;
+    }
+    &__marathon {
+        color: #646464;
+        font-size: 14px;
+        font-weight: 500;
+    }
+    &__descr {
+        margin-top: 10px;
+        color: #0d0d0d;
+        font-size: 16px;
+        font-weight: 300;
+    }
+    
+}
