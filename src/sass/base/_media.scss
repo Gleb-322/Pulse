@@ -1,6 +1,6 @@
 @media (max-width: 1200px) {
     .container {
-        max-width: 850px; 
+        max-width: 750px; 
         }
     .title {
         &_left {
@@ -41,6 +41,27 @@
         &__wrapper {
             width: 100%;
         }
+        &__content {
+            font-size: 13px;
+        }
+    }
+    .carousel {
+        .tns-item {
+            img {
+                width: 600px;
+            }
+        }
+    }
+    .catalog {
+        &__content {
+            justify-content: space-evenly;
+        }
+    }
+    .comment {
+        &__text {
+            padding-right: 0;
+        }
+    }
     
 }
 
@@ -90,6 +111,11 @@
             height: 55px;
             font-size: 16px;
         }
+        &_mini {
+            width: 131px;
+            height: 40px;
+            font-size: 14px;
+        }
     }
     .advantages {
         &__wrapper {
@@ -103,11 +129,33 @@
             margin-bottom: 30px;
         }  
     }
-    }
+    
     .consultation {
         padding: 82px 0;
         &__descr {
             font-size: 18px;
+        }
+    }
+
+    .carousel {
+        padding: 50px 0;
+        .tns-item {
+            img {
+                width: 590px;
+            }
+        }
+    }
+    
+    .prev, .next {
+        display: none;
+    }
+    .catalog {
+        padding-bottom: 70px;
+    }
+
+    .comment {
+        &__descr {
+            font-size: 13px;
         }
     }
 }
@@ -118,7 +166,6 @@
         padding: 20px 5px 50px 5px;
         background-size: 1100px 618px;
         background-position: 11%;
-        
         &__wrapper {
             margin-top: 55px;
             align-items: center;
@@ -157,6 +204,11 @@
             height: 55px;
             font-size: 16px;
         }
+        &_mini {
+            width: 131px;
+            height: 40px;
+            font-size: 14px;
+        }
     } 
     .consultation {
         display: flex;
@@ -164,6 +216,24 @@
         align-items: center;
        
     }
+
+    .carousel {
+        padding: 50px 0;
+        .tns-item {
+            img {
+                width: 500px;
+            }
+        }
+    }
+.catalog {
+    &__tab {
+        width: 140px;
+        height: 44px;
+        font-size: 14px;
+        line-height: 43px;
+    }
+}
+
     
     
 }
@@ -200,6 +270,11 @@
             width: 100%;
             height: 55px;
             font-size: 16px;
+        }
+        &_mini {
+            width: 131px;
+            height: 40px;
+            font-size: 14px;
         }
     }
     

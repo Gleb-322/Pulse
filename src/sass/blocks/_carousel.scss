@@ -1,9 +1,12 @@
 .carousel {
+    display: flex;
+    justify-content: center;
     padding: 81px 0;
     &__inner {
         position: relative;
         width: 750px;
         margin: 0 auto;
+        
     }
     .prev, .next {
         position: absolute;
@@ -28,12 +31,19 @@
             margin: 0 auto;
         }
     }
-    // .tns-nav { /* стили для точек в tinyslider */
-    //     button {
-    //         background-color: red;
-    //     }
-    //     .tns-nav-active {
-    //         background-color: blue;
-    //     }
-    // }
+    .tns-nav { /* стили для точек в tinyslider */
+        width: 48px;
+        display: block;
+        margin: 0 auto;
+        button {
+            width: 16px;
+            height: 12px;
+            border-radius: 10px;
+            background-color: $main-color;
+            border: none;
+        }
+        .tns-nav-active {
+            background-color: black;
+        }
+    }
 }

@@ -24,11 +24,9 @@ const slider = tns({
     items: 1,
     slideBy: 'page',
     autoplay: false,
+    nav: true,
+    navPosition: "bottom",
     controls: false,
-    nav: false,
-    // responsive: {
-
-    // }
 });
 
 document.querySelector('.prev').addEventListener ('click', function () {  /* document.querySelector('.prev') обращение к первому элементу на странице с классом .prev */
