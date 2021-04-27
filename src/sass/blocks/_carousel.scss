@@ -32,10 +32,11 @@
         }
     }
     .tns-nav { /* стили для точек в tinyslider */
-        width: 48px;
+        width: 72px;
         display: block;
         margin: 0 auto;
         button {
+            margin:0 4px;
             width: 16px;
             height: 12px;
             border-radius: 10px;

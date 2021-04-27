@@ -54,8 +54,21 @@
     }
     .catalog {
         &__content {
-            justify-content: space-evenly;
+            justify-content: center;
         }
+        &-item {
+            margin-right: 20px;
+            &:nth-child(2) {
+                margin-right: 0;
+            }
+            &:nth-child(4) {
+                margin-right: 0;
+            }
+            &:nth-child(6) {
+                margin-right: 0;
+            }
+        }
+        
     }
     .comment {
         &__text {
@@ -76,7 +89,7 @@
     }
     .promo {
         min-height: 643px;
-        background-size: 1200px 643px;
+        background-size: 1233px 650px;
         background-position: 10%;
         padding: 20px 0 50px 0;
         &__header {
@@ -121,8 +134,8 @@
         &__wrapper {
             margin-top: 50px;
             display: flex;
-            flex-direction: column;
-            align-items: center;
+            flex-wrap: wrap;
+            justify-content: center;
         }
         &__icon {
             width: 320px;
@@ -134,6 +147,23 @@
         padding: 82px 0;
         &__descr {
             font-size: 18px;
+        }
+    }
+
+    .catalog {
+        &__tabs {
+            margin-top: 55px;
+        }
+        &__tab {
+            width: 200px;
+            font-size: 16px;
+            transition: none;
+            &:hover {
+                box-shadow: none;
+            }
+        }
+        &__content {
+            margin-top: 55px;
         }
     }
 
@@ -154,8 +184,13 @@
     }
 
     .comment {
+        padding-bottom: 50px;
         &__descr {
             font-size: 13px;
+        }
+        &__img {
+            width: 160px;
+            height: 160px;
         }
     }
 }
@@ -170,6 +205,9 @@
             margin-top: 55px;
             align-items: center;
         }
+    }
+    .container {
+        max-width: 560px;
     }
     .title {
         &_left {
@@ -209,11 +247,14 @@
             height: 40px;
             font-size: 14px;
         }
+    
+    
     } 
     .consultation {
         display: flex;
         flex-direction: column;
         align-items: center;
+        padding: 45px 0 20px 0;
        
     }
 
@@ -221,25 +262,43 @@
         padding: 50px 0;
         .tns-item {
             img {
-                width: 500px;
+                width: 435px;
             }
         }
     }
-.catalog {
-    &__tab {
-        width: 140px;
-        height: 44px;
-        font-size: 14px;
-        line-height: 43px;
-    }
-}
 
-    
+    .catalog {
+        &__tab {
+            width: 140px;
+            height: 44px;
+            font-size: 14px;
+            line-height: 43px;
+        }
+        &-item {
+            margin-right: 0;
+        }
+        
+        
+    }
+
+    .comment {
+        &__item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 80px;
+        }
+        &__text {
+            padding: 0 35px;
+            display: block;
+            margin: 0 auto;
+        }
+    }
     
 }
 @media (max-width: 575px) {
     .container {
-        max-width: 475px;
+        max-width: 300px;
     .header {
         justify-content: space-around;
         &__logo {
@@ -281,8 +340,8 @@
     }
     .promo {
         min-height: 670px;
-        padding: 20px 5px 40px 5px;
-        background-size: 870px 700px;
+        padding: 5px 5px 40px 5px;
+        background-size: 970px 700px;
         &__wrapper {
             margin-top: 43px;
         }
@@ -314,6 +373,7 @@
 
     }
     .advantages {
+        padding: 40px 0;
         &__icon {
             width: 247px;
         }
@@ -327,7 +387,56 @@
             margin-top: 30px;
         }
     }
-    
+    .carousel  {
+        .tns-item {
+            img {
+                width: 300px;
+            }
+        }
+        .tns-nav {
+            button {
+                margin: 0px 6px;
+                width: 10px;
+                height: 10px;
+            }
+        }
+    }
+    .catalog {
+        &__content {
+            margin-top: 40px;
+        }
+        &__tab {
+            width: 90px;
+            height: 36px;
+            font-size: 10px;
+            line-height: 32px;
+            transform: skewX(-8deg);
+            div {
+                transform: skewX(8deg); /* выравнивание текста по вертикале */
+            }
+        }
+    }
+    .comment {
+        &__item {
+            margin-top: 50px;
+            &:nth-child(2) {
+                margin-top: 40px;
+            }
+        }
+        &__img {
+            width: 140px;
+            height: 140px;
+        }
+        &__text {
+            margin-top: 15px;
+            padding: 0;
+            text-align: center;
+        }
+        &__descr {
+            text-align: left;
+        }
+        
+    }
 }
     
 

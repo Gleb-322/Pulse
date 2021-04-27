@@ -27,6 +27,7 @@ const slider = tns({
     nav: true,
     navPosition: "bottom",
     controls: false,
+    preventScrollOnTouch: "force"
 });
 
 document.querySelector('.prev').addEventListener ('click', function () {  /* document.querySelector('.prev') обращение к первому элементу на странице с классом .prev */
@@ -37,7 +38,7 @@ document.querySelector('.next').addEventListener ('click', function () {  /* doc
     slider.goTo('next');
 });
 
-$(document).ready(function() { /* универсальный стрипт для табов */
+$(document).ready(function() { /* универсальный скрипт для табов */
     $('ul.catalog__tabs').on('click', 'li:not(.catalog__tab_active)', function() {
         $(this)
             .addClass('catalog__tab_active').siblings().removeClass('catalog__tab_active')
