@@ -115,21 +115,64 @@
     .button {
         width: 137px;
         height: 23px;
+        transition: none;
+        &:hover {
+            box-shadow: none;
+        }
         &_main {
             width: 280px;
             height: 50px;
+            &:hover {
+                box-shadow: none;
+            }
         }
         &_submit {
             width: 100%;
             height: 55px;
             font-size: 16px;
+            &:hover {
+                box-shadow: none;
+            }
         }
         &_mini {
             width: 131px;
             height: 40px;
             font-size: 14px;
+            &:hover {
+                box-shadow: none;
+            }
         }
     }
+    .footer {
+        &__info {
+            padding: 50px 50px 60px 50px;
+            width: 385px;
+            height: 250px;
+        }
+        &__addr {
+            margin-bottom: 30px;
+            font-size: 17px;
+            line-height: 17px;
+        }
+        &__phone {
+            font-size: 17px;
+            line-height: 17px;
+            text-decoration: underline;
+        }
+        &__social-item {
+            width: 47px;
+            height: 47px;
+            margin: 0 8px;
+            transition: none;
+            img {
+                height: 25px;
+            }
+            &:hover {
+                box-shadow: none;
+            }
+        }
+    }
+    
     .advantages {
         &__wrapper {
             margin-top: 50px;
@@ -161,6 +204,7 @@
             &:hover {
                 box-shadow: none;
             }
+            
         }
         &__content {
             margin-top: 55px;
@@ -294,7 +338,28 @@
             margin: 0 auto;
         }
     }
-    
+    .footer {
+        &__info {
+            padding: 30px 30px;
+            width: 270px;
+            height: 210px;
+        }
+        &__addr {
+            font-size: 14px;
+            line-height: 14px;
+        }
+        &__phone {
+            font-size: 14px;
+            line-height: 14px;
+        }
+        &__social-item {
+            width: 35px;
+            height: 35px;
+            img {
+                height: 20px;
+            }
+        }
+    }
 }
 @media (max-width: 575px) {
     .container {
@@ -436,6 +501,33 @@
             text-align: left;
         }
         
+    }
+    .footer {
+        &__info {
+            padding: 20px 5px 20px 5px;
+            width: 215px;
+            height: 170px;
+        }
+        &__addr {
+            margin-bottom: 20px;
+            font-size: 14px;
+            line-height: 14px;
+        }
+        &__phone {
+            margin-bottom: 25px;
+            font-size: 13px;
+            line-height: 13px;
+            text-decoration: underline;
+        }
+        &__social-item {
+            width: 35px;
+            height: 35px;
+            margin: 0 5px;
+            transition: none;
+            img {
+                height: 20px;
+            }
+        }
     }
 }
     
