@@ -112,6 +112,7 @@ $(document).ready(function() { /* универсальный скрипт для
     validateForms('#consultation form');
     validateForms('#order form');
 
-    
+    /* маска ввода , этот плагин не воспринимает type в html*/
+    $('input[name=phone]').mask("+34(999) 999-999");
 
 });
