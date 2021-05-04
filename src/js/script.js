@@ -51,13 +51,13 @@ $(document).ready(function() { /* универсальный скрипт для
             $(this).on('click', function(e) {
                 e.preventDefault();
                 $('.catalog-item__content').eq(i).toggleClass('catalog-item__content_active');
-                $('.catalog-item__list').eq(i).toggleClass('catalog-item__list_active');
+                $('.catalog-item__block').eq(i).toggleClass('catalog-item__block_active');
             })
         });
     };
 
     toggleSlide('.catalog-item__link');
-    toggleSlide('.catalog-item__back');
+    toggleSlide('.catalog-item__block__back');
 
     // Modal 
     /* fadeOut(); позволяет анимированно скрыть какие-то элементы на странице */
@@ -114,5 +114,51 @@ $(document).ready(function() { /* универсальный скрипт для
 
     /* маска ввода , этот плагин не воспринимает type в html*/
     $('input[name=phone]').mask("+34(999) 999-999");
+
+    /* отправка писем с помощью локального сервера 
+    submit() это и есть сама отправка
+    e.preventDefault(); - отмена стандартного действия браузера
+    $.ajax - метод отправки данных на сервер!
+    type: "POST" настраиваю на то что я хочу стелать, отдать серверу или получить с сервера данные, в данном случае отдавать данные "POST"
+    url: "mailer/smart.php" - здесь мы говорим какой обработчик будет делать все это, куда будем отправлять наш запрос
+    data: $(this).serialize() - тут прописываю те данные которые я хочу отправить на сервер
+    .done(function() { - обрабатываем ответ от сервера!
+        $(this).find("input").val(""); - после отправки формы очистим все инпуты
+        $('form').trigger('reset'); - этот метод очищает все формы
+    });*/
+    
+    $('form').submit(function(e) {
+        e.preventDefault();
+        $.ajax({
+            type: "POST",
+            url: "mailer/smart.php",
+            data: $(this).serialize()
+        }).done(function() {
+            $(this).find("input").val("");
+            $('#consultation, #order').fadeOut();
+            $('.overlay, #thanks').fadeIn('slow');
+            $('form').trigger('reset');
+        });
+        return false;
+    });
+
+    // скрол по всей странице smooth scroll and pageup
+    // если во время прокрутки значение пикселей сверху от страницы в браузере привысило 1600 то появляется стрелка
+
+    $(window).scroll(function() {
+        if ($(this).scrollTop() > 1600) {
+            $('.pageup').fadeIn();
+        } else {
+            $('.pageup').fadeOut();
+        }
+    });
+    // универсальный скрипт плавной прокрутки
+    $("a[href='#up']").click(function(){
+        const _href = $(this).attr("href");
+        $("html, body").animate({scrollTop: $(_href).offset().top+"px"});
+        return false;
+    });
+
+    new WOW().init();
 
 });

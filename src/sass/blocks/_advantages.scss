@@ -31,6 +31,30 @@
             color: #ff0000;
             text-decoration: underline;
         }
-    } 
+    }
+    
+    &__img {
+        &_animatedH {
+            animation: heartbeat 1.5s ease infinite;
+            animation-play-state: paused;
+            &:hover {
+                animation-play-state: running;
+            }
+        }
+        &_animatedC {
+            animation: cup 3s ease infinite;
+            animation-play-state: paused;
+            &:hover {
+                animation-play-state: running;
+            }
+        }
+        &_animatedS {
+            animation: shoe 2s linear infinite;
+            animation-play-state: paused;
+            &:hover {
+                animation-play-state: running;
+            }
+        }
+    }
         
 }

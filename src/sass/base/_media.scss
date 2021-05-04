@@ -184,6 +184,29 @@
             width: 320px;
             margin-bottom: 30px;
         }  
+        &__img {
+            &_animatedH {
+                animation: heartbeat 1.5s ease infinite;
+                animation-play-state: running;
+                &:hover {
+                    animation-play-state: initial;
+                }
+            }
+            &_animatedC {
+                animation: cup 3s ease infinite;
+                animation-play-state: running;
+                &:hover {
+                    animation-play-state: initial;
+                }
+            }
+            &_animatedS {
+                animation: shoe 2s linear infinite;
+                animation-play-state: running;
+                &:hover {
+                    animation-play-state: initial;
+                }
+            }
+        }
     }
     
     .consultation {
@@ -243,7 +266,7 @@
     .promo {
         min-height: 618px;
         padding: 20px 5px 50px 5px;
-        background-size: 1100px 618px;
+        background-size: 1100px 621px;
         background-position: 11%;
         &__wrapper {
             margin-top: 55px;
@@ -295,13 +318,19 @@
     
     } 
     .consultation {
+        min-height: 580px;
         display: flex;
         flex-direction: column;
         align-items: center;
         padding: 45px 0 20px 0;
+        &__descr {
+            margin-top: 40px;
+        }
        
     }
-
+    .advantages {
+        padding: 50px 0 40px 0;
+    }
     .carousel {
         padding: 50px 0;
         .tns-item {
@@ -364,6 +393,7 @@
 @media (max-width: 575px) {
     .container {
         max-width: 300px;
+    }
     .header {
         justify-content: space-around;
         &__logo {
@@ -392,16 +422,14 @@
         }
         &_submit {
             width: 100%;
-            height: 55px;
-            font-size: 16px;
+            height: 40px;
+            font-size: 12px;
         }
         &_mini {
             width: 131px;
             height: 40px;
             font-size: 14px;
         }
-    }
-    
     }
     .promo {
         min-height: 670px;
@@ -444,8 +472,8 @@
         }
     }
     .consultation {
-        min-height: 480px;
-        padding: 40px 0;
+        min-height: 430px;
+        padding: 30px 0;
         &__descr {
             font-size: 13px;
             text-align: center;
@@ -528,6 +556,36 @@
                 height: 20px;
             }
         }
+    }
+    .feed-form {
+        display: block;
+        margin: 0 auto;
+        margin-top: 30px;
+        width: 190px;
+        input {
+            height: 35px;
+            font-size: 13px;
+            width: 100%;
+        }
+    }
+    .modal {
+        width: 210px;
+        min-height: 310px;
+        padding: 12px 7px;
+        &__subtitle {
+            font-size: 15px;
+        }
+        &__descr {
+            font-size: 14px;
+        }
+        
+    }
+
+    .pageup {
+        right: 37px;
+        bottom: 30px;
+        width: 35px;
+        height: 35px;
     }
 }
     
