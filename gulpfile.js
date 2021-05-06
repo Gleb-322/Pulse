@@ -9,7 +9,7 @@ const htmlmin = require('gulp-htmlmin');
 
 // Static server
 gulp.task('server', function() {
-    browserSync.init({
+    browserSync({
         server: {
             baseDir: "dist"
         }
@@ -62,7 +62,7 @@ gulp.task('mailer', function () {
 gulp.task('images', function () {
     return gulp.src("src/img/**/*") 
         .pipe(imagemin())
-        .pipe(gulp.dest('dist/img'))
+        .pipe(gulp.dest('dist/img'));
 });
 
 gulp.task('default', gulp.parallel('watch', 'server', 'styles', 'scripts', 'fonts', 'icons', 'html', 'mailer', 'images'));
